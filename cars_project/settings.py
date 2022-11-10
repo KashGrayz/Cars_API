@@ -69,7 +69,6 @@ TEMPLATES = [
 
 REST_FRAMEWORK = {
     'COERCE_DECIMAL_TO_STRING': False
-
 }
 
 WSGI_APPLICATION = 'cars_project.wsgi.application'
@@ -119,4 +118,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try:
     from cars_project.local_settings import *
 except ImportError:
-    pass
+    raise ImportError("local ettings not found")
