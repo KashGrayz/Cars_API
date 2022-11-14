@@ -1,18 +1,18 @@
 {
 	"info": {
-		"_postman_id": "13091400-d20e-4c4a-a1eb-1d37d94fdc4c",
-		"name": "Cars_API",
+		"_postman_id": "9762605b-3c21-44ef-b97a-55fbbfe12c26",
+		"name": "Products_API_Project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24341228"
 	},
 	"item": [
 		{
-			"name": "Get_All_Cars",
+			"name": "Get_All_Products",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/cars/?dealership=Subaru of Gwinnett",
+					"raw": "http://127.0.0.1:8000/api/products/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -23,27 +23,21 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"cars",
+						"products",
 						""
-					],
-					"query": [
-						{
-							"key": "dealership",
-							"value": "Subaru of Gwinnett"
-						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Create_Car",
+			"name": "Create_Product",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"make\": \"Pontiac\",\n    \"model\": \"GTO\",\n    \"year\": 2004,\n    \"price\": 11000.0\n}",
+					"raw": "{\n    \"title\": \"Raw Sugar\",\n    \"discription\": \"1lb 100% raw sugar no additives or processing\",\n    \"price\": 4.00,\n    \"inventory_quantity\": 76\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -51,7 +45,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/cars/",
+					"raw": "http://127.0.0.1:8000/api/products/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -62,7 +56,7 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"cars",
+						"products",
 						""
 					]
 				}
@@ -70,12 +64,12 @@
 			"response": []
 		},
 		{
-			"name": "Get_Cars_By_Id",
+			"name": "Get_Product_By_Id",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/cars/4/",
+					"raw": "http://127.0.0.1:8000/api/products/1/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -86,8 +80,8 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"cars",
-						"4",
+						"products",
+						"1",
 						""
 					]
 				}
@@ -95,13 +89,13 @@
 			"response": []
 		},
 		{
-			"name": "Update_Car",
+			"name": "Update_Product",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"make\": \"Pontiac\",\n    \"model\": \"G8\",\n    \"year\": 2006,\n    \"price\": 16000.0\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -109,7 +103,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/cars/5/",
+					"raw": "http://127.0.0.1:8000/api/products/3/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -120,8 +114,8 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"cars",
-						"5",
+						"products",
+						"3",
 						""
 					]
 				}
@@ -129,12 +123,12 @@
 			"response": []
 		},
 		{
-			"name": "Delete_Car",
+			"name": "Delete_Product",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/cars/5/",
+					"raw": "http://127.0.0.1:8000/api/products/3/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -145,8 +139,8 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"cars",
-						"5",
+						"products",
+						"3",
 						""
 					]
 				}
